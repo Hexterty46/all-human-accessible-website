@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.5;
+}
+
+:root {
+  --milledoni-black: #212121;
+  --milledoni-grey: #898a8d;
+  --milledoni-light-grey: #f6f5f5;
+  --milledoni-white: #ffffff;
+  --milledoni-light-yellow: #f9f2d4;
+  --milledoni-yellow: #e2b100;
+  --milledoni-purple: #aa2677;
+  --milledoni-blue: #466ebf;
+  --milledoni-red: #b2291f;
+  --milledoni-green: #20a687;
+  line-height: 1.4;
+}
+
+.milledoni-header-logo-big-letters {
+    display: none;
+
+    @media (min-width: 678px) {
+        display: block;
+    }
+}
+
+header {
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+}
+
+button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+button p {
+    display: none;
+
+    @media (min-width: 678px) {
+        display: flex
+    }
+}
+
+.sticky-button {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+    padding: 1em;
+    border: 2px solid black;
+}
