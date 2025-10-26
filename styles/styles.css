@@ -78,3 +78,49 @@ button p {
     padding: 1em;
     border: 2px solid black;
 }
+
+.filter-section {
+  background-color: var(--milledoni-light-grey);
+  padding: 1.5em;
+  border-top: 6px solid var(--milledoni-yellow);
+  border-radius: 12px;
+  margin: .5em;
+  width: 96%;
+
+  @media (min-width: 678px) {
+    width: 10%;
+  }
+}
+
+.filter-title {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  text-align: center;
+  color: var(--milledoni-black);
+}
+
+.filter-form {
+  display: flex;
+  gap: 1em;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.filter-group label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: var(--milledoni-black);
+}
+
+.filter-group select {
+  padding: 0.6em;
+  border-radius: 8px;
+  border: 1px solid var(--milledoni-grey);
+  font-size: 1rem;
+  background-color: var(--milledoni-white);
+  color: var(--milledoni-black);
+}
