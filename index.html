@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Milledoni</title>
         <link rel="stylesheet" href="styles/styles.css">
+        <script src="/scripts/script.js"></script>
     </head>
     <body>
         <header>
@@ -33,9 +34,26 @@
             </nav>
         </header>
         <main>
-            <button class="sticky-button">
-                <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 15C8.44771 15 8 15.4477 8 16C8 16.5523 8.44771 17 9 17C9.55229 17 10 16.5523 10 16C10 15.4477 9.55229 15 9 15Z" fill="#0F0F0F"></path> <path d="M14 16C14 15.4477 14.4477 15 15 15C15.5523 15 16 15.4477 16 16C16 16.5523 15.5523 17 15 17C14.4477 17 14 16.5523 14 16Z" fill="#0F0F0F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C10.8954 1 10 1.89543 10 3C10 3.74028 10.4022 4.38663 11 4.73244V7H6C4.34315 7 3 8.34315 3 10V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V10C21 8.34315 19.6569 7 18 7H13V4.73244C13.5978 4.38663 14 3.74028 14 3C14 1.89543 13.1046 1 12 1ZM5 10C5 9.44772 5.44772 9 6 9H7.38197L8.82918 11.8944C9.16796 12.572 9.86049 13 10.618 13H13.382C14.1395 13 14.832 12.572 15.1708 11.8944L16.618 9H18C18.5523 9 19 9.44772 19 10V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V10ZM13.382 11L14.382 9H9.61803L10.618 11H13.382Z" fill="#0F0F0F"></path> <path d="M1 14C0.447715 14 0 14.4477 0 15V17C0 17.5523 0.447715 18 1 18C1.55228 18 2 17.5523 2 17V15C2 14.4477 1.55228 14 1 14Z" fill="#0F0F0F"></path> <path d="M22 15C22 14.4477 22.4477 14 23 14C23.5523 14 24 14.4477 24 15V17C24 17.5523 23.5523 18 23 18C22.4477 18 22 17.5523 22 17V15Z" fill="#0F0F0F"></path> </g></svg>            
+            <button class="fixed-button" id="fixedButton">
+                <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 10C7 9.45 7.44612 9 7.99749 9C8.54887 9 9 9.45 9 10C9 10.55 8.54887 11 7.99749 11C7.44612 11 7 10.55 7 10Z" fill="#000000"></path> <path d="M11.9975 9C11.4461 9 11 9.45 11 10C11 10.55 11.4461 11 11.9975 11C12.5489 11 13 10.55 13 10C13 9.45 12.5489 9 11.9975 9Z" fill="#000000"></path> <path d="M15 10C15 9.45 15.4461 9 15.9975 9C16.5489 9 17 9.45 17 10C17 10.55 16.5489 11 15.9975 11C15.4461 11 15 10.55 15 10Z" fill="#000000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2 3H4.8C3.81 3 3 3.81 3 4.8V21L6.6 17.4H19.2C20.19 17.4 21 16.59 21 15.6V4.8C21 3.81 20.19 3 19.2 3ZM19.2 15.6H6.6L4.8 17.4V4.8H19.2V15.6Z" fill="#000000"></path> </g></svg>            
             </button>
+            <section class="chat-box" id="chatBox">
+                <header class="chat-header">
+                    <p>AI chat</p>
+                    <button class="close-chat" id="closeChat" aria-label="Sluit chat">X</button>
+                </header>
+                <main class="chat-body">
+                    <article class="message bot">
+                        <p><strong>AI:</strong> Waar ben je naar op zoek</p>
+                    </article>
+                </main>
+                <footer class="chat-input">
+                    <input type="text" placeholder="Typ hier je bericht..." aria-label="Bericht invoer">
+                    <button aria-label="Verstuur">
+                        ➤
+                    </button>
+                </footer>
+            </section>
             <section class="filter-section">
                 <form class="filter-form">
                     <fieldset class="filter-group">
@@ -45,6 +63,8 @@
                             <option value="man">Man</option>
                             <option value="vrouw">Vrouw</option>
                             <option value="kind">Kind</option>
+                            <option value="vriend">Vriend</option>
+                            <option value="vriendin">Vriendin</option>
                         </select>
                     </fieldset>
 
@@ -55,6 +75,8 @@
                             <option value="verjaardag">Verjaardag</option>
                             <option value="kerst">Kerst</option>
                             <option value="jubileum">Jubileum</option>
+                            <option value="lente">Lente</option>
+                            <option value="herfst">Herfst</option>
                         </select>
                     </fieldset>
 
@@ -68,7 +90,146 @@
                         </select>
                     </fieldset>
                 </form>
-            </section> 
+            </section>
+            <h2>Laat je inspireren door de wereld van Milledoni</h2>
+            <button class="filteren-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"> <path fill="#000000" d="M96 128C83.1 128 71.4 135.8 66.4 147.8C61.4 159.8 64.2 173.5 73.4 182.6L256 365.3L256 480C256 488.5 259.4 496.6 265.4 502.6L329.4 566.6C338.6 575.8 352.3 578.5 364.3 573.5C376.3 568.5 384 556.9 384 544L384 365.3L566.6 182.7C575.8 173.5 578.5 159.8 573.5 147.8C568.5 135.8 556.9 128 544 128L96 128z"/></svg>
+                Filteren op
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"> <path fill="#000000" d="M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z"/></svg>
+            </button>
+            <section class="producten">
+                <article class="product">
+                    <button class="add-list">
+                        <svg aria-label="add to list" width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="37.7846" cy="37.7846" rx="34.7846" ry="34.7846" fill="white"></ellipse>
+                            <path d="M37.7842 1.84766C57.6316 1.84766 73.7215 17.9369 73.7217 37.7842C73.7217 57.6317 57.6317 73.7217 37.7842 73.7217C17.9369 73.7215 1.84766 57.6316 1.84766 37.7842C1.84788 17.937 17.937 1.84787 37.7842 1.84766Z" stroke="#C9C9C9" stroke-opacity="0.3" stroke-width="2.30504"></path>
+                            <path d="M16 26H41.5507M16 35H57M16 44H49.8696M16 53H57" stroke="#212121" stroke-width="4"></path>
+                            <path d="M52 13V27M59 20H45" stroke="#212121" stroke-width="4"></path>
+                        </svg>
+                    </button>
+                    <figure class="product-img">
+                    <img src="assests/lamp.jpg" alt="Adv. Un viaggio in Lapponia">
+                    </figure>
+                </article>
+
+                <article class="product">
+                    <button class="add-list">
+                    <img src="img/add-list-icon.png" alt="Toevoegen aan lijst">
+                    </button>
+                    <figure class="product-img">
+                    <img src="assests/kaars.jpg" alt="Een kaars">
+                    </figure>
+                </article>
+
+                <article class="product">
+                    <button class="add-list">
+                    <img src="img/add-list-icon.png" alt="Toevoegen aan lijst">
+                    </button>
+                    <figure class="product-img">
+                    <img src="assests/lamp.jpg" alt="Regala una bicicletta usata da restaurare insieme">
+                    <figcaption>Regala una bicicletta usata da restaurare insieme</figcaption>
+                    </figure>
+                </article>
+
+                <article class="product">
+                    <button class="add-list">
+                    <img src="img/add-list-icon.png" alt="Toevoegen aan lijst">
+                    </button>
+                    <figure class="product-img">
+                    <img src="assests/kaars.jpg" alt="Adv. Un viaggio alla scoperta dei paesaggi innevati">
+                    <figcaption>Adv. Un viaggio alla scoperta dei paesaggi innevati</figcaption>
+                    </figure>
+                </article>
+            </section>
+
         </main>
+        <footer class="site-footer">
+            <section class="footer-text">
+            <section>
+                <h2>Cadeau's in je inbox!</h2>
+                <h3>Je cadeau-inspiratie deze maand</h3>
+            </section>
+            <form class="email-form">
+                <label for="email" class="visually-hidden">E-mailadres</label>
+                <input type="email" id="email" name="email" placeholder="Geef je e-mailadres aan" required> 
+                <button>
+                <svg width="30" height="30" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18.7812" cy="18.7812" r="18.7812" fill="#212121"/>
+                    <path d="M11.5352 27.1069L24.2242 12.6875" stroke="white" stroke-width="2"/>
+                    <path d="M16.1484 12.6875H24.2233V20.1856" stroke="white" stroke-width="2"/>
+                </svg>
+                </button>
+            </form>
+            </section>
+
+            <figure class="footer-logo">
+                <svg width="252" height="46" viewBox="0 0 252 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48.8945 15.0898H55.7628V44.4101H48.8945V15.0898Z" fill="#F6F5F5"/>
+                    <path d="M80.4751 38.5486V44.4101H65.3555V15.0898H72.1391V38.5486H80.4751Z" fill="#F6F5F5"/>
+                    <path d="M103.44 38.5486V44.4101H88.3203V15.0898H95.1039V38.5486H103.44Z" fill="#F6F5F5"/>
+                    <path d="M118.068 20.5343V27.1924H129.167V32.5114H118.068V38.9626H129.167V44.407H111.281V15.0898H129.167V20.5343H118.068Z" fill="#F6F5F5"/>
+                    <path d="M149.267 15.0898C158.983 15.0898 164.512 22.2529 164.512 29.7516C164.512 37.2502 159.027 44.4101 149.267 44.4101H138.504V15.0898H149.267ZM145.287 20.9545V38.5454H148.932C154.42 38.5454 157.603 34.2739 157.603 29.7484C157.603 25.2229 154.42 20.9545 148.932 20.9545H145.287Z" fill="#F6F5F5"/>
+                    <path d="M171.18 29.7542C171.18 21.713 176.96 14.3398 186.72 14.3398C196.479 14.3398 202.215 21.713 202.215 29.7542C202.215 37.7954 196.435 45.1686 186.72 45.1686C177.004 45.1686 171.18 37.7954 171.18 29.7542ZM195.306 29.7542C195.306 24.937 192.039 20.4586 186.72 20.4586C181.401 20.4586 178.133 24.9402 178.133 29.7542C178.133 34.5683 181.357 39.0531 186.72 39.0531C192.082 39.0531 195.306 34.5714 195.306 29.7542Z" fill="#F6F5F5"/>
+                    <path d="M228.031 34.1893V15.0898H234.777V44.4101H227.695L217.139 25.5647V44.4101H210.355V15.0898H217.434L228.031 34.1893Z" fill="#F6F5F5"/>
+                    <path d="M244.375 15.0898H251.243V44.4101H244.375V15.0898Z" fill="#F6F5F5"/>
+                    <path d="M20.2335 14.9688L20.0191 15.4295L19.8046 14.9688L11.6953 18.8029V44.3973H12.9291V19.5948L20.0191 16.2412L27.1105 19.5948V44.3973H28.3428V18.8029L20.2335 14.9688Z" fill="#D6AE21"/>
+                    <path d="M19.3661 15.6621C19.0112 14.0082 16.879 13.4131 14.9989 12.8883C14.3435 12.7052 13.7243 12.5313 13.2064 12.3192C11.0801 11.451 8.66998 10.4669 7.31692 8.10508C6.43502 6.56561 6.43653 4.56994 7.31844 3.02283C8.11426 1.62983 9.45827 0.853227 11.0484 0.940194C13.9644 1.08667 16.3127 3.6255 18.2245 8.70012C18.753 10.1038 19.2498 11.5334 19.6998 12.9478C19.7784 13.1934 19.8992 13.4635 20.023 13.7427C20.2767 14.3149 20.538 14.9084 20.5818 15.4805L19.3646 15.6606L19.3661 15.6621ZM10.8264 2.18062C9.43108 2.18062 8.70019 3.09912 8.38759 3.64686C7.72012 4.81406 7.71861 6.31996 8.38457 7.48105C9.52622 9.47367 11.6328 10.3327 13.67 11.1657C14.1215 11.3503 14.7074 11.5136 15.3281 11.6875C16.3096 11.9606 17.403 12.2673 18.3423 12.7555C17.9481 11.5502 17.5223 10.3388 17.0738 9.14412C15.3553 4.58062 13.3649 2.30421 10.988 2.18368L10.8279 2.1791L10.8264 2.18062Z" fill="#D6AE21"/>
+                    <path d="M20.9007 15.6639L19.6836 15.4838C19.7274 14.9101 19.9901 14.3166 20.2438 13.7429C20.3662 13.4653 20.487 13.1967 20.5655 12.9511C21.0216 11.523 21.5184 10.0934 22.0409 8.70341C23.9527 3.62879 26.3009 1.08996 29.2169 0.943485C30.7995 0.861095 32.1526 1.63312 32.9484 3.02918C33.8303 4.57628 33.8303 6.5689 32.9484 8.10837C31.5923 10.4733 29.1837 11.4559 27.059 12.3225C26.541 12.5346 25.9219 12.707 25.2665 12.89C23.3864 13.4164 21.2541 14.0115 20.8977 15.6654L20.9007 15.6639ZM29.4389 2.18239L29.2789 2.18697C26.9034 2.30597 24.9131 4.58391 23.1946 9.1474C22.7491 10.3299 22.3233 11.5428 21.9261 12.7573C22.8654 12.2691 23.9587 11.9624 24.9403 11.6893C25.561 11.5154 26.1469 11.3521 26.5984 11.1675C28.634 10.336 30.7391 9.47696 31.8823 7.48282C32.5482 6.32325 32.5482 4.81735 31.8808 3.65015C31.5697 3.10089 30.8358 2.18239 29.4389 2.18239Z" fill="#D6AE21"/>
+                    <path d="M33.0708 14.5781L27.7895 18.7909L26.7418 19.6325L20.0252 24.9881L13.2322 19.599L12.1749 18.7574L6.9079 14.5781H0V43.9671H6.9366V23.5153L10.9455 26.504L12.1988 27.4364L18.3605 32.0269H21.6948L27.7177 27.5368L28.9663 26.6092L33.1187 23.5153V43.9671H40.0505V14.5781H33.0708Z" fill="#F6F5F5"/>
+                </svg>
+            </figure>
+
+            <nav class="footer-left" aria-label="Footer navigatie">
+            <ul>
+                <li><strong>Regali</strong></li>
+                <li><a href="#">Landing page</a></li>
+                <li><a href="#">Popup Builder</a></li>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Content</a></li>
+                <li><a href="#">Intergrations</a></li>
+            </ul>
+
+            <ul>
+                <li><strong>Doni durati</strong></li>
+                <li><a href="#">Web-Designers</a></li>
+                <li><a href="#">Marketers</a></li>
+                <li><a href="#">Small Business</a></li>
+                <li><a href="#">Website Builder</a></li>
+            </ul>
+
+            <ul>
+                <li><strong>Unisciti a noi</strong></li>
+                <li><a href="#">Academy</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Themes</a></li>
+                <li><a href="#">Hosting</a></li>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+
+            <ul>
+                <li><strong>Company</strong></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Teams</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+
+            <ul>
+                <li><strong>Contact us</strong></li>
+                <li><a href="#">milledoni@gmail.com</a></li>
+                <li><a href="#">Follow us</a></li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="white"></circle>
+                <path d="M16.7273 4H14.3471C13.295 4 12.286 4.42143 11.5421 5.17157C10.7981 5.92172 10.3802 6.93913 10.3802 8V10.4H8V13.6H10.3802V20H13.5537V13.6H15.9339L16.7273 10.4H13.5537V8C13.5537 7.78783 13.6373 7.58434 13.7861 7.43431C13.9349 7.28429 14.1367 7.2 14.3471 7.2H16.7273V4Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="white"></circle>
+                <path d="M15.8027 4C18.1595 4.00016 20.0703 5.91081 20.0703 8.26758V15.8027C20.0702 18.1594 18.1594 20.0702 15.8027 20.0703H8.26758C5.91081 20.0703 4.00016 18.1595 4 15.8027V8.26758C4 5.91071 5.91071 4 8.26758 4H15.8027ZM8.26758 5C6.463 5 5 6.463 5 8.26758V15.8027C5.00016 17.6072 6.4631 19.0703 8.26758 19.0703H15.8027C17.6071 19.0702 19.0702 17.6071 19.0703 15.8027V8.26758C19.0703 6.4631 17.6072 5.00016 15.8027 5H8.26758ZM10.4492 8.88281C11.1052 8.54246 11.852 8.41799 12.583 8.52637C13.3288 8.63696 14.0196 8.98448 14.5527 9.51758C15.0857 10.0507 15.4334 10.7416 15.5439 11.4873C15.6522 12.2182 15.5269 12.9652 15.1865 13.6211C14.8461 14.2769 14.3075 14.8084 13.6475 15.1406C12.9874 15.4729 12.2394 15.589 11.5098 15.4717C10.7801 15.3543 10.1056 15.0098 9.58301 14.4873C9.0604 13.9647 8.71607 13.2902 8.59863 12.5605C8.48124 11.831 8.59658 11.0829 8.92871 10.4229C9.26101 9.76264 9.79316 9.22323 10.4492 8.88281ZM12.4365 9.51562C11.9136 9.43808 11.3794 9.52711 10.9102 9.77051C10.4408 10.014 10.06 10.3997 9.82227 10.8721C9.58458 11.3443 9.502 11.8794 9.58594 12.4014C9.66995 12.9234 9.91615 13.4064 10.29 13.7803C10.6638 14.154 11.1461 14.4003 11.668 14.4844C12.19 14.5684 12.7259 14.4858 13.1982 14.248C13.6704 14.0103 14.0553 13.6294 14.2988 13.1602C14.5423 12.6909 14.6322 12.1567 14.5547 11.6338C14.4756 11.1003 14.227 10.606 13.8457 10.2246C13.4643 9.84324 12.97 9.59476 12.4365 9.51562ZM16.2881 7.40039C16.5159 7.44696 16.6874 7.64901 16.6875 7.89062C16.6875 8.13229 16.516 8.33428 16.2881 8.38086L16.1875 8.39062H16.1787C15.9028 8.39037 15.6787 8.16661 15.6787 7.89062C15.6788 7.61469 15.9028 7.39088 16.1787 7.39062H16.1875L16.2881 7.40039Z" fill="black"></path>
+                </svg>     
+            </ul>
+            </nav>
+        </footer>
     </body>
 </html>

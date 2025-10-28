@@ -66,7 +66,95 @@ button p {
     }
 }
 
-.sticky-button {
+.chat-box {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1000;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 16px;
+  height: 420px;
+  background-color: var(--milledoni-light-grey);
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: var(--milledoni-black);
+  color: var(--milledoni-white);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  align-items: center;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  color: var(--milledoni-white);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.close-chat:hover {
+  opacity: 0.7;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 12px;
+  background-color: var(--milledoni-light-grey);
+  overflow-y: auto;
+}
+
+.message {
+  background-color: var(--milledoni-white);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  max-width: 88%;
+}
+
+.message.bot {
+  border-left: 3px solid var(--milledoni-yellow);
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+  margin-top: 150px;
+  background-color: var(--milledoni-white);
+}
+
+.chat-input input {
+  flex: 1;
+  border: 2px solid rgb(133, 133, 133);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-input button {
+  background-color: var(--milledoni-yellow);
+  color: var(--milledoni-black);
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.chat-input button:hover {
+  background-color: #d3a800;
+}
+
+.fixed-button {
     position: fixed;
     z-index: 1000;
     bottom: 0;
@@ -79,13 +167,50 @@ button p {
     border: 2px solid black;
 }
 
+.producten {
+  background-color: var(--milledoni-light-grey);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product {
+  position: relative;
+  background-color: var(--milledoni-white);
+  padding: 8px;
+  width: 90%;
+  max-width: 300px;
+}
+
+.product-img img {
+  display: block;
+  height: 250px;
+  width: 100%;
+  gap: 5px;
+}
+
+.add-list {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  background: transparent;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border: none;
+  z-index: 1;
+}
+
+
+h2 {
+  color: var(--milledoni-black);
+}
 .filter-section {
   background-color: var(--milledoni-light-grey);
   padding: 1.5em;
   border-top: 6px solid var(--milledoni-yellow);
   border-radius: 12px;
   margin: .5em;
-  width: 96%;
+  width: 95%;
 
   @media (min-width: 678px) {
     width: 10%;
@@ -102,6 +227,7 @@ button p {
 .filter-form {
   display: flex;
   gap: 1em;
+  margin-left: -14px;
 }
 
 .filter-group {
@@ -123,4 +249,110 @@ button p {
   font-size: 1rem;
   background-color: var(--milledoni-white);
   color: var(--milledoni-black);
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--milledoni-yellow);
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+
+  .footer-text-left {
+    h2 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: normal;
+      opacity: 0.9;
+    }
+  }
+
+  input[type="email"] {
+    padding: 10px 14px;
+    border-radius: 24px;
+    font-size: 14px;
+    width: 100%;
+
+    @media (min-width: 678px) {
+      width: 260px;
+    }
+  }
+}
+
+.footer-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 20px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: white;
+      margin-bottom: 6px;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.milledoni-footer-info-left {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    color: white;
+
+    a {
+      outline: none;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.email-form button {
+    background-color: var(--milledoni-yellow);
+    border-radius: 24px;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+footer {
+  background-color: var(--milledoni-black);
+  color: var(--milledoni-light-grey);
+  padding: 40px;
 }
