@@ -12,11 +12,7 @@ closeChatButton.addEventListener('click', closeChat )
 filterButton.addEventListener('click', toggleFilter )
 // filterenSection.addEventListener('click', closeFilter )
 
-
-
 document.addEventListener('keydown', handleKeyPress);
-
-
 
 function handleKeyPress(event) {
   if (event.code == 'Escape') {
@@ -35,8 +31,6 @@ function closeChat() {
     chatBox.classList.remove("is-open");
     fixedButton.classList.remove("is-open");
 }
-
-
 
 function toggleFilter() {
     filterenSection.classList.toggle("is-open")
