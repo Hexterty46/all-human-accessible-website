@@ -117,10 +117,10 @@ button p {
     margin-bottom: 12px;
     color: #333;
     font-weight: normal;
-    display: block;
 
     @media (min-width: 1024px) {
         font-size: 20px;
+        display: block;
     }
 }
 
@@ -259,6 +259,8 @@ button p {
     white-space: nowrap;
     background-color: var(--milledoni-white);
     border: 1px solid var(--milledoni-grey);
+    margin-bottom: -120px;
+    margin-right: 700px;
 
     @media (min-width: 1024px) {
         margin: 0 auto 20px auto;
